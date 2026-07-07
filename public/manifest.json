@@ -5,5 +5,18 @@
   "display": "standalone",
   "background_color": "#0c0a08",
   "theme_color": "#d9a441",
-  "icons": []
+  "icons": [
+    {
+      "src": "/icons/temp-nep-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/temp-nep-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
 }

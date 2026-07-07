@@ -1,4 +1,8 @@
 {
   "ok": true,
+  "installed": [
+    "/public/images/approved/nep-approved-pwa-launch-pack-v1.webp",
+    "/public/images/approved/nep-approved-pwa-launch-pack-v1.png"
+  ],
   "missingAssetsDocumented": true
 }
