@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-07-07T00:00:00.000Z",
+  "branch": "fix/apply-final-brand-assets-and-visual-ui",
+  "previewUrl": "https://national-epoxy-git-fix-apply-fi-8f3e9a-strategic-minds-advisory.vercel.app",
+  "verifiedRoutes": [
+    "/",
+    "/dashboard",
+    "/admin",
+    "/installer",
+    "/floor-design-center",
+    "/api/health",
+    "/api/cron/validate"
+  ],
+  "screenshots": [
+    "outputs/preview-screenshots/home.png",
+    "outputs/preview-screenshots/floor-design-center.png",
+    "outputs/preview-screenshots/installer.png",
+    "outputs/preview-screenshots/admin.png"
+  ],
+  "status": "verified",
+  "blockers": []
+}
