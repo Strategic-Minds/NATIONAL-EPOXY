@@ -4,10 +4,10 @@ import { AssetFrame } from "@/components/ui/AssetFrame";
 import { Card } from "@/components/ui/Card";
 
 const charts = [
-  ["/color-charts/nep-color-chart-top-flake-v1.webp", "Flake systems"],
-  ["/color-charts/nep-color-chart-metallic-v1.webp", "Metallic systems"],
-  ["/color-charts/nep-color-chart-quartz-v1.webp", "Quartz systems"],
-  ["/color-charts/nep-color-chart-glitter-v1.webp", "Glitter systems"]
+  ["/color-charts/nep-color-chart-top-flake-v1.webp", "Top flake epoxy color chart", "top-flake-chart"],
+  ["/color-charts/nep-color-chart-metallic-v1.webp", "Metallic epoxy color chart", "metallic-chart"],
+  ["/color-charts/nep-color-chart-quartz-v1.webp", "Quartz epoxy color chart", "quartz-chart"],
+  ["/color-charts/nep-color-chart-glitter-v1.webp", "Glitter additive color chart", "glitter-chart"]
 ] as const;
 
 export default function FloorDesignCenterPage() {
@@ -21,9 +21,9 @@ export default function FloorDesignCenterPage() {
         </div>
         <div className="grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
           <div className="grid gap-4 md:grid-cols-2">
-            {charts.map(([src, title]) => (
+            {charts.map(([src, title, testId]) => (
               <Card key={title} title={title}>
-                <AssetFrame src={src} alt={title} className="aspect-[4/3] rounded-[1.25rem]" />
+                <AssetFrame src={src} alt={title} testId={testId} className="aspect-[4/3] rounded-[1.25rem]" />
               </Card>
             ))}
             <Card title="Solid color systems">

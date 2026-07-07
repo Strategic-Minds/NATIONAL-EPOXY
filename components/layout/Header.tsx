@@ -11,32 +11,25 @@ const nav = [
 
 export function Header() {
   return (
-    <header className="mb-6 rounded-[1.75rem] border border-white/10 bg-black/85 px-4 py-4 backdrop-blur sm:px-6">
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <Link href="/" className="flex items-center gap-4">
-          <BrandLogo className="h-9 w-auto sm:h-10" />
-          <div className="hidden text-xs uppercase tracking-[0.35em] text-amber-200/70 sm:block">Durable Floors. Built To Last.</div>
+    <header className="w-full border-b border-black/10 bg-black text-white">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-3">
+          <BrandLogo className="h-10 w-auto" />
         </Link>
-        <div className="flex flex-col gap-3 lg:items-end">
-          <div className="flex flex-wrap items-center gap-2">
-            <Link href="tel:18005551234" className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white">
-              (800) 555-1234
+        <nav className="hidden items-center gap-6 lg:flex">
+          {nav.map(([href, label]) => (
+            <Link key={label} href={href} className="text-sm font-semibold uppercase tracking-[0.08em] text-white/90">
+              {label}
             </Link>
-            <Link href="/estimate" className="rounded-full bg-[#d4af37] px-4 py-2 text-sm font-bold text-black">
-              Get Quote
-            </Link>
-          </div>
-          <nav className="flex flex-wrap gap-2">
-            {nav.map(([href, label]) => (
-              <Link
-                key={href + label}
-                href={href}
-                className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:border-amber-300/40 hover:bg-amber-300/10"
-              >
-                {label}
-              </Link>
-            ))}
-          </nav>
+          ))}
+        </nav>
+        <div className="flex items-center gap-2">
+          <Link href="tel:1888123NEPX" className="rounded-full border border-[#d4af37]/30 bg-[#0b0b0b] px-4 py-2 text-sm font-bold text-[#f2b21c]">
+            (888) 123-NEPX
+          </Link>
+          <Link href="/estimate" className="rounded-full bg-[#f2b21c] px-4 py-2 text-sm font-black text-black">
+            Get Quote
+          </Link>
         </div>
       </div>
     </header>

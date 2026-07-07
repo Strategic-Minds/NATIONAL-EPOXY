@@ -2,10 +2,10 @@ import Link from "next/link";
 import { AssetFrame } from "@/components/ui/AssetFrame";
 
 const charts = [
-  ["/color-charts/nep-color-chart-top-flake-v1.webp", "Top flake"],
-  ["/color-charts/nep-color-chart-glitter-v1.webp", "Glitter"],
-  ["/color-charts/nep-color-chart-metallic-v1.webp", "Metallic"],
-  ["/color-charts/nep-color-chart-quartz-v1.webp", "Quartz"]
+  ["/color-charts/nep-color-chart-top-flake-v1.webp", "Top flake epoxy color chart", "top-flake-chart"],
+  ["/color-charts/nep-color-chart-glitter-v1.webp", "Glitter additive color chart", "glitter-chart"],
+  ["/color-charts/nep-color-chart-metallic-v1.webp", "Metallic epoxy color chart", "metallic-chart"],
+  ["/color-charts/nep-color-chart-quartz-v1.webp", "Quartz epoxy color chart", "quartz-chart"]
 ];
 
 export function ChartStrip() {
@@ -21,10 +21,10 @@ export function ChartStrip() {
         </Link>
       </div>
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        {charts.map(([src, label]) => (
+        {charts.map(([src, label, testId]) => (
           <article key={label} className="overflow-hidden rounded-3xl border border-white/10 bg-[#120e0a]">
             <div className="relative aspect-[4/3]">
-              <AssetFrame src={src} alt={`National Epoxy Pros ${label} color chart`} className="absolute inset-0" />
+              <AssetFrame src={src} alt={label} testId={testId} className="absolute inset-0" />
             </div>
             <div className="p-4">
               <div className="text-sm font-bold text-white">{label}</div>
