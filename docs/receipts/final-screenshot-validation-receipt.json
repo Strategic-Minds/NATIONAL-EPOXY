@@ -1,6 +1,8 @@
 {
-  "timestamp": "2026-07-07T00:00:00.000Z",
-  "branch": "fix/apply-final-brand-assets-and-visual-ui",
+  "timestamp": "2026-07-07T04:41:51.2626535-04:00",
+  "branch": "fix/final-approved-brand-web-pack-implementation",
+  "commitBefore": "965cc13b877fb7c983e8a624d36bf2088289b021",
+  "commitAfter": "pending",
   "screenshots": [
     "outputs/preview-screenshots/home-desktop.png",
     "outputs/preview-screenshots/home-mobile.png",
@@ -12,6 +14,26 @@
     "outputs/preview-screenshots/installer-mobile.png",
     "outputs/preview-screenshots/products.png"
   ],
-  "status": "pass",
-  "blockers": []
+  "buildStatus": "pass",
+  "playwrightStatus": "pass",
+  "assetSelectorStatus": "pass",
+  "visualMatchChecklist": [
+    "black public header",
+    "public nav excludes dashboard/admin/installer",
+    "gold get quote CTA",
+    "light hero field",
+    "diagonal gold divider",
+    "large quote form card",
+    "black trust bar",
+    "before/after comparison",
+    "reviews cards",
+    "floor system cards",
+    "digital bid strip",
+    "bottom call-now CTA strip",
+    "mobile homepage stack"
+  ],
+  "remainingVisualGaps": [
+    "minor pixel-spacing differences may remain versus the approved design"
+  ],
+  "mergeReadiness": "not claimed"
 }

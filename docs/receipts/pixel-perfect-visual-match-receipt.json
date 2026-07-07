@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-07-07T04:41:51.2626535-04:00",
+  "branch": "fix/final-approved-brand-web-pack-implementation",
+  "commitBefore": "965cc13b877fb7c983e8a624d36bf2088289b021",
+  "commitAfter": "pending",
+  "approvedImagesUsed": [
+    "APPROVED_PUBLIC_HOMEPAGE_DESKTOP.png",
+    "APPROVED_PUBLIC_HOMEPAGE_MOBILE.png"
+  ],
+  "screenshotPaths": [
+    "outputs/preview-screenshots/home-desktop.png",
+    "outputs/preview-screenshots/home-mobile.png",
+    "outputs/preview-screenshots/design-center-desktop.png",
+    "outputs/preview-screenshots/design-center-mobile.png",
+    "outputs/preview-screenshots/estimate.png",
+    "outputs/preview-screenshots/dashboard.png",
+    "outputs/preview-screenshots/admin.png",
+    "outputs/preview-screenshots/installer-mobile.png",
+    "outputs/preview-screenshots/products.png"
+  ],
+  "buildStatus": "pass",
+  "playwrightStatus": "pass",
+  "assetSelectorStatus": "pass",
+  "visualMatchChecklist": [
+    "black public header",
+    "public nav only",
+    "phone CTA",
+    "gold get quote CTA",
+    "white hero field",
+    "diagonal metallic-gold divider",
+    "large headline hierarchy",
+    "dominant quote form card",
+    "black trust bar",
+    "before/after comparison",
+    "reviews cards",
+    "image-based floor system cards",
+    "digital bid strip",
+    "bottom call-now CTA strip",
+    "mobile stack matches target"
+  ],
+  "remainingVisualGaps": [
+    "minor spacing and crop differences remain against the reference screenshots"
+  ],
+  "mergeReadiness": "not yet claimed"
+}
