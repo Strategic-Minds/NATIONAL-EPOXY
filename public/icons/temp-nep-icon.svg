@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="National Epoxy Pros temporary icon">
+  <rect width="512" height="512" rx="112" fill="#0c0a08"/>
+  <circle cx="256" cy="256" r="170" fill="#d9a441" opacity="0.12"/>
+  <path d="M150 344V168h56l69 96v-96h52v176h-54l-71-99v99z" fill="#f6efe6"/>
+</svg>

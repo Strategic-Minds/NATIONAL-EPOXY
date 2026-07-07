@@ -1,0 +1,5 @@
+{
+  "ok": true,
+  "checks": ["routes", "assets", "noPhoenix", "pwa", "rollback", "receipts"],
+  "blockers": []
+}
