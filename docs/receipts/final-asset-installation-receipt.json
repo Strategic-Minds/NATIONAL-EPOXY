@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-07-07T00:00:00.000Z",
+  "branch": "fix/apply-final-brand-assets-and-visual-ui",
+  "assetPathsVerified": [
+    "/public/logos/nep-logo-horizontal-black-gold-v1.svg",
+    "/public/images/nep-hero-metallic-showroom-v1.webp",
+    "/public/color-charts/nep-color-chart-top-flake-v1.webp",
+    "/public/color-charts/nep-color-chart-glitter-v1.webp",
+    "/public/color-charts/nep-color-chart-metallic-v1.webp",
+    "/public/color-charts/nep-color-chart-quartz-v1.webp"
+  ],
+  "status": "pass",
+  "blockers": []
+}

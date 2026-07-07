@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-07T00:00:00.000Z",
+  "branch": "fix/apply-final-brand-assets-and-visual-ui",
+  "screenshots": [
+    "outputs/preview-screenshots/home-desktop.png",
+    "outputs/preview-screenshots/home-mobile.png",
+    "outputs/preview-screenshots/design-center-desktop.png",
+    "outputs/preview-screenshots/design-center-mobile.png",
+    "outputs/preview-screenshots/estimate.png",
+    "outputs/preview-screenshots/dashboard.png",
+    "outputs/preview-screenshots/admin.png",
+    "outputs/preview-screenshots/installer-mobile.png",
+    "outputs/preview-screenshots/products.png"
+  ],
+  "status": "pass",
+  "blockers": []
+}

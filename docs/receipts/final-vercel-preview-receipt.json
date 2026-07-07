@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-07-07T00:00:00.000Z",
+  "branch": "fix/apply-final-brand-assets-and-visual-ui",
+  "previewUrl": "https://national-epoxy-git-fix-apply-fi-8f3e9a-strategic-minds-advisory.vercel.app",
+  "verifiedRoutes": [
+    "/",
+    "/estimate",
+    "/products",
+    "/dashboard",
+    "/admin",
+    "/installer",
+    "/floor-design-center",
+    "/api/health",
+    "/api/cron/validate"
+  ],
+  "status": "pending-external-verification",
+  "blockers": [
+    "Latest Vercel deployment was observed building during this turn"
+  ]
+}

@@ -3,10 +3,12 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 
 const nav = [
   ["/", "Home"],
+  ["/products", "Products"],
+  ["/estimate", "Estimate"],
+  ["/floor-design-center", "Floor Design Center"],
   ["/dashboard", "Dashboard"],
   ["/admin", "Admin"],
-  ["/installer", "Installer"],
-  ["/floor-design-center", "Floor Design Center"]
+  ["/installer", "Installer"]
 ] as const;
 
 export function Header() {
@@ -15,7 +17,7 @@ export function Header() {
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <Link href="/" className="flex items-center gap-4">
           <BrandLogo className="h-9 w-auto sm:h-10" />
-          <div className="hidden text-xs uppercase tracking-[0.35em] text-amber-200/70 sm:block">Enterprise PWA</div>
+          <div className="hidden text-xs uppercase tracking-[0.35em] text-amber-200/70 sm:block">Durable Floors. Built To Last.</div>
         </Link>
         <nav className="flex flex-wrap gap-2">
           {nav.map(([href, label]) => (

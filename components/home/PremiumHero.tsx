@@ -11,28 +11,28 @@ export function PremiumHero() {
           <div className="relative">
             <BrandLogo className="h-10 w-auto brightness-110" />
             <div className="mt-8 max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-200/80">Enterprise PWA / Premium Garage Finishes</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-200/80">National Epoxy Pros</p>
               <h1 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-6xl">
-                Luxury epoxy floors, showroom-grade visuals, and a quote-first digital bid funnel.
+                Durable floors. Built to last. Nationwide.
               </h1>
               <p className="mt-5 max-w-xl text-sm leading-7 text-white/72 sm:text-base">
-                National Epoxy Pros now presents the brand, the workflow, and the installer experience in one polished shell.
-                Use it to route leads, showcase floor systems, and move customers from inspiration to estimate with confidence.
+                Premium epoxy, flake, and polished concrete flooring for garages, homes, and businesses.
+                Move customers from inspiration to quote with a clean, customer-facing experience.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/dashboard" className="rounded-full bg-[#d4af37] px-5 py-3 text-sm font-bold text-black">
-                View customer dashboard
+              <Link href="/estimate" className="rounded-full bg-[#d4af37] px-5 py-3 text-sm font-bold text-black">
+                Get my free quote
               </Link>
-              <Link href="/installer" className="rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white">
-                Open installer PWA
+              <Link href="/floor-design-center" className="rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white">
+                View floor systems
               </Link>
             </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               {[
                 ["Quote-first funnel", "Capture intent before the estimate"],
-                ["Brand asset pack", "Installed and wired into the UI"],
-                ["Mobile PWA", "Installer flow optimized for field use"]
+                ["Nationwide service", "Licensed, insured, and built for fast installs"],
+                ["5-star reputation", "Trusted by homeowners and commercial clients"]
               ].map(([title, text]) => (
                 <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-4">
                   <div className="text-sm font-semibold text-white">{title}</div>
