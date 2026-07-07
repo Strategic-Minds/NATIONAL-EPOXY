@@ -1,0 +1,20 @@
+name: preview-validation
+on:
+  pull_request:
+  push:
+    branches: [build/national-epoxy-pros-enterprise-pwa-shell]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npx playwright install --with-deps
+      - run: npm run lint
+      - run: npm run build
+      - run: npm run validate:assets
+      - run: npm run validate:no-phoenix
+      - run: npx playwright test

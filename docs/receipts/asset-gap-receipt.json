@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-07-06T00:00:00.000Z",
+  "branch": "build/national-epoxy-pros-enterprise-pwa-shell",
+  "commitBefore": "0d110b831c27fd333cc2a3953d0b1181779d7090",
+  "commitAfter": "see final branch head",
+  "filesChanged": ["docs/validation/missing-assets.json", "docs/receipts/asset-install-receipt.json"],
+  "checksRun": ["asset archive inspection", "public directory inspection"],
+  "status": "pass",
+  "missingAssets": [
+    "/public/logos/nep-logo-horizontal-black-gold-v1.svg",
+    "/public/color-charts/nep-color-chart-top-flake-v1.webp",
+    "/public/color-charts/nep-color-chart-glitter-v1.webp",
+    "/public/color-charts/nep-color-chart-metallic-v1.webp",
+    "/public/color-charts/nep-color-chart-quartz-v1.webp",
+    "/public/images/nep-hero-metallic-showroom-v1.webp"
+  ],
+  "blockers": ["These assets were not present in the attached archive"],
+  "nextAction": "Upload the missing workbook assets into the documented public paths."
+}

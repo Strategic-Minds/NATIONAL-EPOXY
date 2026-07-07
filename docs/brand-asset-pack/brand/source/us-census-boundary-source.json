@@ -1,0 +1,26 @@
+{
+  "source_name": "Cartographic Boundary File, United States Nation, 1:5,000,000 scale",
+  "source_publisher": "U.S. Census Bureau",
+  "source_file_uploaded": "/mnt/data/cb_2024_us_nation_5m(1).zip",
+  "extracted_file": "cb_2024_us_nation_5m.shp",
+  "source_format": "ESRI Shapefile in ZIP",
+  "source_crs_input": "EPSG:4269",
+  "working_projection": "EPSG:5070 NAD83 / Conus Albers",
+  "date_accessed_or_used": "2026-07-07",
+  "commercial_use_status": "U.S. federal government cartographic boundary data is expected public-domain; provenance retained.",
+  "attribution_required": "No visual attribution expected; source notes retained.",
+  "included_in_source": "National U.S. geometry potentially includes non-contiguous parts and territories depending on source geometry.",
+  "final_shape_decision": "Contiguous continental United States only, clipped to lon/lat bbox [-125.1, 24.0, -66.5, 49.9].",
+  "removed": [
+    "Alaska",
+    "Hawaii",
+    "Puerto Rico",
+    "Guam",
+    "American Samoa",
+    "Northern Mariana Islands",
+    "U.S. Virgin Islands",
+    "territories and non-contiguous geometries outside bbox"
+  ],
+  "simplification_meters": 18000,
+  "svg_validation": "Vector path only; no raster maps embedded; no external image references."
+}

@@ -1,0 +1,33 @@
+{
+  "name": "national-epoxy-pros-enterprise-pwa",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "npx tsc -p tsconfig.lint.json --noEmit",
+    "validate:assets": "node scripts/validate-assets.mjs",
+    "validate:no-phoenix": "node scripts/validate-no-phoenix.mjs",
+    "validate:receipts": "node scripts/write-receipt.mjs validate",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "next": "14.2.33",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.55.0",
+    "@eslint/eslintrc": "3.2.0",
+    "@eslint/js": "9.13.0",
+    "@types/node": "20.17.12",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "autoprefixer": "10.4.20",
+    "eslint": "9.13.0",
+    "postcss": "8.4.47",
+    "tailwindcss": "3.4.14",
+    "typescript": "5.6.3"
+  }
+}
