@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-06T00:00:00.000Z",
+  "filesCreated": true,
+  "commandsRun": ["npm install", "npm run lint", "npm run build", "npm run validate:assets", "npm run validate:no-phoenix", "npx playwright test"]
+}
