@@ -1,6 +1,8 @@
 import { AppShell } from "@/components/layout/AppShell";
 import { Header } from "@/components/layout/Header";
 import { Card } from "@/components/ui/Card";
+import { AdminAIInsights } from "@/components/ai/AdminAIInsights";
+import { AIWorkflowValidation } from "@/components/ai/AIWorkflowValidation";
 
 export default function AdminPage() {
   return (
@@ -24,8 +26,21 @@ export default function AdminPage() {
             </Card>
           ))}
         </div>
-        <Card title="Workflow health">
-          <p className="text-sm leading-7 text-white/75">Lead intake, cron validation, receipts, and route health are all ready for preview and review.</p>
+        <div className="grid gap-4 xl:grid-cols-2">
+          <AdminAIInsights />
+          <AIWorkflowValidation />
+        </div>
+        <Card title="Owner Demo: AI Enhanced Operating System">
+          <div className="grid gap-3 text-sm leading-7 text-white/75 lg:grid-cols-2">
+            <div>Lead comes in from quote form</div>
+            <div>AI summarizes project and scores quality</div>
+            <div>Admin reviews estimate and pricing check</div>
+            <div>SMS/WhatsApp follow-up prepared in dry-run</div>
+            <div>Customer dashboard updates</div>
+            <div>Installer PWA receives job checklist</div>
+            <div>Vercel cron validates system health</div>
+            <div>Receipts are written</div>
+          </div>
         </Card>
       </section>
     </AppShell>

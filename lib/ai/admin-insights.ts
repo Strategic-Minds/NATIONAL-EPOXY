@@ -1,0 +1,1 @@
+export { runAdminInsights } from "./provider";

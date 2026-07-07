@@ -1,6 +1,7 @@
 import { AppShell } from "@/components/layout/AppShell";
 import { Header } from "@/components/layout/Header";
 import { Card } from "@/components/ui/Card";
+import { AIQuoteAssistant } from "@/components/ai/AIQuoteAssistant";
 
 const steps = ["Upload photos", "Space details", "Project details", "Floor system", "Contact", "Review"] as const;
 
@@ -21,16 +22,30 @@ export default function EstimatePage() {
               ))}
             </div>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {["Photo upload", "Space details", "Project details", "Contact info"].map((field) => (
+              {["Photo upload", "Measurements / sq ft", "Floor system selection", "Color / design selection", "Project urgency", "Contact info"].map((field) => (
                 <div key={field} className="rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white/55">
                   {field}
                 </div>
               ))}
             </div>
+            <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/70">
+              <label className="flex items-start gap-3">
+                <input type="checkbox" className="mt-1" />
+                <span>By submitting, you agree to receive project updates by SMS or WhatsApp. Message and data rates may apply. Reply STOP to opt out.</span>
+              </label>
+            </div>
+            <div className="mt-4 rounded-2xl border border-[#f2b21c]/30 bg-[#fff7df] p-4 text-black">
+              <div className="text-xs font-semibold uppercase tracking-[0.3em] text-black/60">AI estimate-readiness</div>
+              <div className="mt-1 text-2xl font-black">92%</div>
+              <p className="mt-2 text-sm leading-6 text-black/70">Demo preview indicates the project is ready for a fast quote and install planning.</p>
+            </div>
           </Card>
-          <Card title="Trust and security">
-            <p className="text-sm leading-7 text-white/75">Your information stays private. We use the intake form only to prepare your quote and suggested installation plan.</p>
-          </Card>
+          <div className="space-y-4">
+            <AIQuoteAssistant />
+            <Card title="Dry-run payload preview">
+              <pre className="overflow-x-auto rounded-2xl bg-black/40 p-4 text-xs text-white/75">{JSON.stringify({ mode: "dry-run", channel: "sms", sent: false, requiresConsent: true }, null, 2)}</pre>
+            </Card>
+          </div>
         </div>
       </section>
     </AppShell>
