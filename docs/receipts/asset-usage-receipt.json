@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-07-06T00:00:00.000Z",
+  "branch": "fix/apply-final-brand-assets-and-visual-ui",
+  "commitBefore": "7e157bbdf849926e312d7e21ececfe7b2b8a89f5",
+  "commitAfter": "e9200a1b6ab9aaa2271362cc8a3e8d02633a6ded",
+  "filesChanged": [
+    "components/ui/AssetFrame.tsx",
+    "components/ui/BrandLogo.tsx",
+    "components/home/PremiumHero.tsx",
+    "components/home/ChartStrip.tsx",
+    "components/floor-design/FloorDesignGrid.tsx"
+  ],
+  "checksRun": ["npm run validate:assets", "npx playwright test"],
+  "status": "pass",
+  "renderedAssets": [
+    "/images/nep-hero-metallic-showroom-v1.webp",
+    "/logos/nep-logo-horizontal-black-gold-v1.svg",
+    "/color-charts/nep-color-chart-top-flake-v1.webp",
+    "/color-charts/nep-color-chart-glitter-v1.webp",
+    "/color-charts/nep-color-chart-metallic-v1.webp",
+    "/color-charts/nep-color-chart-quartz-v1.webp"
+  ],
+  "blockers": [],
+  "nextAction": "Keep asset paths stable for preview verification."
+}

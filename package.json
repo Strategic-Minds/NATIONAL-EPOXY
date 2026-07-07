@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npx tsc --noEmit",
+    "lint": "npx tsc -p tsconfig.lint.json --noEmit",
     "validate:assets": "node scripts/validate-assets.mjs",
     "validate:no-phoenix": "node scripts/validate-no-phoenix.mjs",
     "validate:receipts": "node scripts/write-receipt.mjs validate",

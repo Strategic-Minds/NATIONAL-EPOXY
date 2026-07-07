@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-07-06T00:00:00.000Z",
+  "branch": "fix/apply-final-brand-assets-and-visual-ui",
+  "commitBefore": "7e157bbdf849926e312d7e21ececfe7b2b8a89f5",
+  "commitAfter": "e9200a1b6ab9aaa2271362cc8a3e8d02633a6ded",
+  "filesChanged": [
+    "app/page.tsx",
+    "app/dashboard/page.tsx",
+    "app/admin/page.tsx",
+    "app/installer/page.tsx",
+    "app/floor-design-center/page.tsx",
+    "components/home/PremiumHero.tsx",
+    "components/home/ChartStrip.tsx",
+    "components/home/ServiceCards.tsx",
+    "components/home/WorkflowCards.tsx",
+    "components/dashboard/DashboardPanels.tsx",
+    "components/admin/AdminCards.tsx",
+    "components/installer/InstallerPanels.tsx",
+    "components/floor-design/FloorDesignGrid.tsx",
+    "components/ui/AssetFrame.tsx",
+    "components/ui/BrandLogo.tsx",
+    "components/ui/SectionHeading.tsx",
+    "components/layout/Header.tsx"
+  ],
+  "checksRun": ["npm run lint", "npm run build", "npx playwright test"],
+  "status": "pass",
+  "renderedAssets": [
+    "/images/nep-hero-metallic-showroom-v1.webp",
+    "/logos/nep-logo-horizontal-black-gold-v1.svg",
+    "/color-charts/nep-color-chart-top-flake-v1.webp",
+    "/color-charts/nep-color-chart-glitter-v1.webp",
+    "/color-charts/nep-color-chart-metallic-v1.webp",
+    "/color-charts/nep-color-chart-quartz-v1.webp"
+  ],
+  "visuallyUpgradedRoutes": [
+    "/",
+    "/dashboard",
+    "/admin",
+    "/installer",
+    "/floor-design-center"
+  ],
+  "screenshots": "not captured in this turn",
+  "blockers": ["Vercel preview not re-verified in this environment"],
+  "nextAction": "Open the Vercel preview and verify the updated visual routes."
+}

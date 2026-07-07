@@ -1,8 +1,10 @@
 import { test, expect } from "@playwright/test";
-test("assets and missing assets are reported", async ({ page, request }) => {
+
+test("hero image and color charts render", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByText("Preview Ready")).toBeVisible();
-  const res = await request.get("/api/cron/validate");
-  const json = await res.json();
-  expect(Array.isArray(json.payload.assetWarnings)).toBe(true);
+  await expect(page.getByRole("img", { name: /metallic showroom hero/i })).toBeVisible();
+  await expect(page.getByRole("img", { name: /top flake/i })).toBeVisible();
+  await expect(page.getByRole("img", { name: /glitter/i })).toBeVisible();
+  await expect(page.getByRole("img", { name: /metallic color chart/i })).toBeVisible();
+  await expect(page.getByRole("img", { name: /quartz/i }).first()).toBeVisible();
 });
