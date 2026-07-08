@@ -1,181 +1,224 @@
 import Link from "next/link";
-import { AppShell } from "@/components/layout/AppShell";
 import { Header } from "@/components/layout/Header";
-import { ChartStrip } from "@/components/home/ChartStrip";
 import { AssetFrame } from "@/components/ui/AssetFrame";
-import { Card } from "@/components/ui/Card";
 
 const systems = [
-  ["Garage Floors", "/color-charts/nep-color-chart-top-flake-v1.webp", "Built tough. Looks amazing."],
-  ["Flake Floors", "/color-charts/nep-color-chart-glitter-v1.webp", "Stylish. Slip-resistant. Built to last."],
-  ["Metallic Floors", "/color-charts/nep-color-chart-metallic-v1.webp", "High-gloss. Unique. One-of-a-kind."],
-  ["Quartz Systems", "/color-charts/nep-color-chart-quartz-v1.webp", "Extreme durability. Maximum traction."],
-  ["Polished Concrete", "/images/approved/nep-approved-pwa-launch-pack-v1.webp", "Sleek. Strong. Low maintenance."],
-  ["Commercial Floors", "/images/approved/nep-approved-pwa-launch-pack-v1.webp", "Durable. Professional. Built to perform."]
+  ["Flake Systems", "/images/floor-systems/nep-hero-flake-garage-sports-cars.png", "Decorative flake finishes with endless color combinations."],
+  ["Metallic Epoxy", "/images/floor-systems/nep-metallic-epoxy-luxury-lounge.png", "Stunning, one-of-a-kind metallic floors with depth and movement."],
+  ["Polished Concrete", "/images/floor-systems/nep-polished-concrete-commercial-lobby.png", "Sleek, natural shine with long-lasting performance."],
+  ["Solid Color Epoxy", "/images/floor-systems/nep-solid-color-commercial-epoxy.png", "Clean, seamless, and durable floors in a wide range of colors."],
+  ["Exterior Patio Coating", "/images/floor-systems/nep-exterior-patio-coating.png", "Slip-resistant, UV-stable coatings built for outdoor living spaces."],
+  ["Exterior Driveway Coating", "/images/floor-systems/nep-exterior-driveway-coating.png", "Tough, long-lasting finishes that stand up to weather and wear."]
 ] as const;
 
-function TrustBar() {
+const trust = ["100% Satisfaction Guaranteed", "Industry Leading Warranties", "Fast, Professional Installation", "Thousands of 5-Star Reviews"];
+
+function UtilityBar() {
   return (
-    <section className="bg-black text-white">
-      <div className="mx-auto grid max-w-7xl gap-3 px-4 py-4 text-xs font-bold uppercase tracking-[0.12em] sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
-        {["100% Satisfaction Guaranteed", "Industry Leading Warranties", "Fast, Professional Installation", "Thousands of 5-Star Reviews"].map((item) => (
-          <div key={item} className="flex items-center justify-center rounded-2xl border border-[#f2b21c]/20 bg-black px-4 py-3 text-center text-white">
-            <span className="mr-2 text-[#f2b21c]">◆</span>
-            {item}
+    <div className="hidden border-b border-[#3b2c00] bg-black text-[#f2b21c] lg:block">
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4 px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.06em]">
+        {["24-Hour Quote Guarantee", "Over 70 Locations Nationwide", "Licensed, Insured & Bonded", "5-Star Rated by Homeowners", "Powered by Xtreme Polishing Systems"].map((item) => (
+          <div key={item} className="flex items-center gap-3">
+            <span>✦</span>
+            <span className="text-white/90">{item}</span>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
 
-function BottomCta() {
+function HeroForm() {
   return (
-    <section className="bg-black text-white">
-      <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <div className="space-y-1">
-          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">Call now for a free quote</div>
-          <div className="text-3xl font-black tracking-tight text-[#f2b21c]">(888) 123-NEPX</div>
-        </div>
-        <div className="flex flex-wrap gap-3">
-          <div className="rounded-full border border-white/10 px-4 py-2 text-sm">Lifetime warranty</div>
-          <div className="rounded-full border border-white/10 px-4 py-2 text-sm">5-star service</div>
-          <div className="rounded-full border border-white/10 px-4 py-2 text-sm">Nationwide coverage</div>
-          <Link href="/estimate" className="rounded-full bg-[#f2b21c] px-5 py-3 text-sm font-black text-black">
-            Get My Free Quote
-          </Link>
-        </div>
+    <div className="w-full max-w-[470px] rounded-[1.7rem] bg-white p-6 shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
+      <div className="text-[1.9rem] font-black leading-[0.92] tracking-tight">
+        GET YOUR <span className="text-[#f2b21c]">FREE</span> DIGITAL BID.
       </div>
-    </section>
+      <div className="mt-1 text-sm text-black/70">Fast. Accurate. No Obligation.</div>
+      <div className="mt-4 grid gap-2">
+        {["Full Name", "Phone Number", "Email Address", "Zip Code", "Project Type", "Project Notes"].map((f, i) => (
+          <div key={f} className={i === 5 ? "rounded-[0.35rem] border border-black/15 px-4 py-4 text-sm text-black/45" : "rounded-[0.35rem] border border-black/15 px-4 py-3 text-sm text-black/45"}>
+            {f}
+          </div>
+        ))}
+      </div>
+      <div className="mt-4 rounded-[0.35rem] bg-[#d6a018] px-4 py-3 text-center text-sm font-black uppercase tracking-[0.04em] text-black">
+        START MY FREE DIGITAL BID
+      </div>
+      <div className="mt-2 text-center text-xs text-black/60">🔒 Routes to /free-digital-bid</div>
+    </div>
   );
 }
 
 export default function HomePage() {
   return (
-    <AppShell>
+    <main className="min-h-screen bg-[#f5f1e8] text-black">
+      <UtilityBar />
       <Header />
-      <main className="bg-white text-black">
-        <section className="relative overflow-hidden bg-[#f7f5f1]">
-          <div className="mx-auto grid max-w-7xl gap-0 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="relative px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-              <div className="max-w-xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#c28a00]">National Epoxy Pros</p>
-                <h1 className="mt-4 max-w-md text-5xl font-black leading-[0.92] tracking-tight text-black sm:text-7xl">
-                  DURABLE FLOORS.
-                  <br />
-                  BUILT TO LAST.
-                  <br />
-                  <span className="text-[#f2b21c]">NATIONWIDE.</span>
-                </h1>
-                <p className="mt-5 max-w-lg text-base leading-7 text-black/80 sm:text-lg">
-                  Premium epoxy, flake, metallic & polished concrete flooring for garages, homes and businesses.
-                </p>
-                <div className="mt-6 flex flex-wrap gap-4 text-xs font-bold uppercase tracking-[0.18em] text-black">
-                  {["Premium Materials", "Built To Last", "Installed By Experts"].map((item) => (
-                    <div key={item} className="flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-3">
-                      <span className="text-[#f2b21c]">⬢</span>
-                      {item}
-                    </div>
-                  ))}
+      <section className="relative overflow-hidden bg-[#f5f1e8]">
+        <div className="mx-auto grid max-w-[1600px] items-stretch gap-0 px-4 pb-0 pt-6 lg:grid-cols-[0.9fr_1.15fr_0.78fr] lg:px-0 lg:pt-0">
+          <div className="relative z-10 px-2 py-4 lg:px-8 lg:py-14">
+            <div className="text-[64px] font-black leading-[0.92] tracking-tight xl:text-[76px]">
+              DURABLE FLOORS.
+              <br />
+              BUILT TO LAST.
+              <br />
+              <span className="text-[#f2b21c]">NATIONWIDE.</span>
+            </div>
+            <p className="mt-4 max-w-[500px] text-[20px] leading-[1.15] text-black/80">
+              Premium epoxy, flake, metallic, and concrete coating systems for homes, businesses, and industrial spaces.
+            </p>
+          </div>
+          <div className="relative min-h-[520px] bg-[#1b1b1b]">
+            <AssetFrame src="/images/hero/national-epoxy-pros-garage-epoxy-hero.png" alt="National Epoxy Pros garage epoxy hero" testId="homepage-hero-image" className="absolute inset-0 object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#f5f1e8] via-transparent to-transparent" />
+            <div className="absolute left-[36%] top-0 hidden h-full w-[46px] bg-[#f2b21c] [clip-path:polygon(0_0,100%_0,86%_100%,0_100%)] lg:block" />
+            <div className="absolute right-0 top-8 hidden w-full justify-end pr-6 lg:flex">
+              <HeroForm />
+            </div>
+          </div>
+          <div className="relative hidden items-end pb-6 lg:flex">
+            <div className="w-full rounded-[2.25rem] bg-black p-3 shadow-[0_24px_60px_rgba(0,0,0,0.4)]">
+              <div className="rounded-[1.7rem] bg-[#0b0b0b] p-4 text-white">
+                <div className="mb-3 flex items-center justify-between text-xs font-bold uppercase tracking-[0.12em] text-[#f2b21c]">
+                  <span>☰</span>
+                  <img src="/logos/nep-logo-horizontal-black-gold-v1.svg" alt="National Epoxy Pros" className="h-6 brightness-0 invert" />
+                  <span>☎</span>
+                </div>
+                <div className="rounded-[1.1rem] bg-white p-4 text-black">
+                  <div className="text-[1.3rem] font-black leading-[0.92] tracking-tight">
+                    DURABLE FLOORS.
+                    <br />
+                    BUILT TO LAST.
+                    <br />
+                    <span className="text-[#f2b21c]">NATIONWIDE.</span>
+                  </div>
+                  <p className="mt-3 text-[0.78rem] leading-5 text-black/75">Premium epoxy, flake, metallic and polished concrete flooring for garages, homes and businesses.</p>
+                  <div className="mt-4 grid gap-2">
+                    {["Full Name", "Phone Number", "Email Address", "Zip Code", "Project Type"].map((field) => (
+                      <div key={field} className="rounded-lg border border-black/10 px-3 py-2 text-xs text-black/45">
+                        {field}
+                      </div>
+                    ))}
+                    <div className="rounded-lg border border-black/10 px-3 py-3 text-xs text-black/45">Tell us about your project...</div>
+                    <div className="rounded-lg bg-[#f2b21c] px-3 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-black">Get My Free Quote</div>
+                    <div className="text-center text-[0.68rem] text-black/60">100% Private & Secure</div>
+                  </div>
+                </div>
+                <div className="mt-3 flex justify-around rounded-[1rem] border border-white/10 bg-[#111] px-2 py-3 text-[0.62rem] font-bold uppercase tracking-[0.08em] text-[#f2b21c]">
+                  <span>Premium Materials</span>
+                  <span>Built To Last</span>
+                  <span>Installed By Experts</span>
                 </div>
               </div>
-              <div className="absolute bottom-0 left-[56%] hidden h-full w-8 -skew-x-[18deg] bg-gradient-to-b from-[#f2b21c] via-[#d19a16] to-[#f6d56c] lg:block" />
             </div>
-            <div className="relative min-h-[420px] px-4 pb-8 pt-2 sm:px-6 lg:px-8 lg:py-8">
-              <AssetFrame
-                src="/images/nep-hero-metallic-showroom-v1.webp"
-                alt="National Epoxy Pros metallic epoxy showroom floor"
-                testId="homepage-hero-image"
-                className="absolute inset-0 rounded-none lg:rounded-l-[1.5rem]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#f7f5f1] via-transparent to-transparent lg:from-transparent lg:to-transparent" />
-              <div className="relative ml-auto mt-4 max-w-md rounded-[1.75rem] bg-white p-5 shadow-[0_18px_40px_rgba(0,0,0,0.16)] lg:mt-6">
-                <div className="text-xl font-black leading-tight">
-                  GET A <span className="text-[#f2b21c]">FAST</span>, NO-OBLIGATION
-                  <br />
-                  QUOTE FOR YOUR PROJECT
-                </div>
-                <div className="mt-4 grid gap-3">
-                  {["Full Name", "Phone Number", "Email Address", "Zip Code", "Project Type", "Tell us about your project..."].map((field, index) => (
-                    <div key={field} className={index === 5 ? "h-24 rounded-xl border border-black/10 px-4 py-3 text-sm text-black/45" : "rounded-xl border border-black/10 px-4 py-3 text-sm text-black/45"}>
-                      {field}
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-4 rounded-xl bg-[#f2b21c] px-4 py-3 text-center text-sm font-black text-black">
-                  GET MY FREE QUOTE
-                </div>
-                <div className="mt-2 text-center text-xs text-black/60">100% Private & Secure</div>
+          </div>
+        </div>
+        <div className="mx-auto mt-4 max-w-[1600px] px-4 lg:hidden">
+          <HeroForm />
+        </div>
+      </section>
+
+      <section className="bg-black text-white">
+        <div className="mx-auto grid max-w-[1600px] gap-3 px-4 py-4 text-[11px] font-black uppercase tracking-[0.08em] sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+          {trust.map((item) => (
+            <div key={item} className="flex items-center justify-center gap-3">
+              <span className="text-[#f2b21c]">✦</span>
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1600px] px-4 py-8 lg:px-8">
+        <div className="mb-3 text-center text-[30px] font-black uppercase tracking-tight">Premium Floor Systems</div>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-6">
+          {systems.map(([title, src, copy]) => (
+            <article key={title} className="overflow-hidden rounded-[0.9rem] border border-black/15 bg-white shadow-sm">
+              <AssetFrame src={src} alt={title} className="aspect-[4/3] object-cover" />
+              <div className="p-4">
+                <h3 className="text-[18px] font-black uppercase leading-5">{title}</h3>
+                <p className="mt-2 text-sm leading-5 text-black/75">{copy}</p>
+                <div className="mt-4 inline-flex rounded-full bg-[#f2b21c] px-4 py-2 text-xs font-black uppercase tracking-[0.04em] text-black">Learn More →</div>
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1600px] px-4 pb-10 lg:px-8">
+        <div className="rounded-[1.2rem] bg-black p-4 text-white shadow-sm lg:flex lg:items-center lg:justify-between">
+          <div className="grid gap-2 lg:max-w-[65%]">
+            <div className="text-[28px] font-black uppercase tracking-tight text-[#f2b21c]">Design Center</div>
+            <div className="text-sm text-white/85">Explore colors, flakes, and finishes. Visualize your space with our interactive tools and premium material options.</div>
+          </div>
+          <Link href="/design-center" className="mt-4 inline-flex rounded-[0.35rem] bg-[#f2b21c] px-5 py-3 text-sm font-black uppercase text-black lg:mt-0">Explore Design Center</Link>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1600px] px-4 pb-8 lg:px-8">
+        <div className="grid gap-4 md:grid-cols-4">
+          {[
+            ["Built To Last", "Industry-leading materials and systems backed by up to a Lifetime Warranty."],
+            ["Nationwide Service", "Over 70 locations and growing. Premium results, no matter where you are."],
+            ["Expert Installers", "Background-checked, certified professionals delivering flawless results."],
+            ["5-Star Experience", "Thousands of happy customers and a proven track record of excellence."]
+          ].map(([title, text]) => (
+            <div key={title} className="rounded-[0.9rem] border border-black/15 bg-white p-5">
+              <div className="text-[20px] font-black uppercase">{title}</div>
+              <div className="mt-2 text-sm leading-6 text-black/75">{text}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1600px] px-4 pb-12 lg:px-8">
+        <div className="text-center text-[32px] font-black uppercase">How It Works</div>
+        <div className="mt-6 grid gap-6 md:grid-cols-4">
+          {[
+            ["Submit Your Project", "Fill out our quick form with details about your space. It only takes 2 minutes."],
+            ["Receive Your Digital Bid", "Get a fast, accurate digital bid with pricing and recommended floor system."],
+            ["Design & Approve", "Choose your colors and finishes in our Design Center and approve your project."],
+            ["Professional Installation", "Our expert team installs your floor with precision and care. Built to last."]
+          ].map(([title, text], idx) => (
+            <div key={title} className="text-center">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-black text-[#f2b21c] text-xl font-black">{idx + 1}</div>
+              <div className="mt-4 text-[18px] font-black uppercase">{title}</div>
+              <div className="mt-2 text-sm leading-6 text-black/75">{text}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <footer className="bg-black text-white">
+        <div className="mx-auto grid max-w-[1600px] gap-8 px-4 py-10 md:grid-cols-4 lg:px-8">
+          <div>
+            <img src="/logos/nep-logo-horizontal-black-gold-v1.svg" alt="National Epoxy Pros" className="h-12 brightness-0 invert" />
+            <p className="mt-4 text-sm leading-6 text-white/75">Premium epoxy, flake, metallic, and concrete coating systems for homes, businesses, and industrial spaces nationwide.</p>
+          </div>
+          <div>
+            <div className="text-lg font-black uppercase text-[#f2b21c]">Quick Links</div>
+            <div className="mt-3 grid gap-2 text-sm text-white/80">
+              {["Floor Systems", "Design Center", "Digital Bid", "Reviews", "About Us", "Contact"].map((item) => <span key={item}>{item}</span>)}
             </div>
           </div>
-          <div className="h-4 bg-black [clip-path:polygon(0_0,100%_0,100%_100%,0_40%)]" />
-        </section>
-
-        <TrustBar />
-
-        <section className="mx-auto max-w-7xl bg-white px-4 py-8 sm:px-6 lg:px-8">
-          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-            <Card title="Before / After">
-              <AssetFrame
-                src="/images/approved/nep-approved-pwa-launch-pack-v1.webp"
-                alt="Before and after epoxy floor comparison"
-                testId="before-after-comparison"
-                className="aspect-[16/9] rounded-[1.25rem]"
-              />
-            </Card>
-            <Card title="Reviews 4.9 ★★★★★">
-              <div className="grid gap-3">
-                {[
-                  "Looks incredible! Couldn't be happier!",
-                  "Professional team and amazing results.",
-                  "Best investment we've made!"
-                ].map((quote) => (
-                  <div key={quote} className="rounded-2xl border border-black/10 bg-[#faf8f3] p-4 text-sm leading-6">{quote}</div>
-                ))}
-              </div>
-            </Card>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl bg-white px-4 pb-6 sm:px-6 lg:px-8">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {systems.map(([title, src, copy]) => (
-              <Card key={title} title={title}>
-                <AssetFrame src={src} alt={title} className="aspect-[4/3] rounded-[1rem]" />
-                <p className="mt-3 text-sm leading-6 text-black/75">{copy}</p>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl bg-white px-4 pb-8 sm:px-6 lg:px-8">
-          <ChartStrip />
-        </section>
-
-        <section className="border-t border-black/10 bg-[#f7f5f1] px-4 py-8 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-4 rounded-[1.5rem] border border-black/10 bg-white p-4 sm:grid-cols-2 lg:grid-cols-5">
-              {[
-                "Step 1\nTell us about your project",
-                "Step 2\nGet your custom quote",
-                "Step 3\nReview & approve your options",
-                "Step 4\nWe schedule your installation",
-                "Step 5\nEnjoy your new floor for years"
-              ].map((step) => (
-                <div key={step} className="rounded-2xl px-3 py-2 text-sm font-semibold text-black/80 whitespace-pre-line">
-                  {step}
-                </div>
-              ))}
-            </div>
-            <div className="mt-4 rounded-[1.25rem] border border-[#f2b21c]/30 bg-white px-5 py-4 text-center text-sm font-bold text-black shadow-sm">
-              Prefer to talk now? <span className="text-[#f2b21c]">(888) 123-NEPX</span>
+          <div>
+            <div className="text-lg font-black uppercase text-[#f2b21c]">Services</div>
+            <div className="mt-3 grid gap-2 text-sm text-white/80">
+              {["Flake Systems", "Metallic Epoxy", "Polished Concrete", "Solid Color Epoxy", "Exterior Patio Coating", "Exterior Driveway Coating"].map((item) => <span key={item}>{item}</span>)}
             </div>
           </div>
-        </section>
-
-        <BottomCta />
-      </main>
-    </AppShell>
+          <div>
+            <div className="text-lg font-black uppercase text-[#f2b21c]">Contact Us</div>
+            <div className="mt-3 grid gap-2 text-sm text-white/80">
+              <span>support@nationalepoxypros.com</span>
+              <span>leads@nationalepoxypros.com</span>
+              <span>WhatsApp: +15559730487</span>
+              <span>70+ Locations Nationwide</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
